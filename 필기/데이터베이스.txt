@@ -1,0 +1,29 @@
+* 데이터베이스 => 데이터를 저장해 놓는 곳!!!
+
+저장되어 있는 데이터가 많으면? ==> 빅데이터!!
+
+- 하지만 중요한 것은 이 많은 데이터를 어떻게 관리하고 어떻게 활용하는가이다..
+
+
+이 데이터베이스를 쓰기 편하게 해주는 것이 바로 DBMS(DataBase Management System)이다.
+사람은 이 DBMS를 잘 쓰는 역할을 해줘야 한다. 이 역할을 해주는 것이 바로 DBMS에서 SQL이다.
+
+* SQL (Structed Query Language) ==> 구조화된 쿼리 언어(규칙 있는 말)
+
+sys => 오라클에서 가장 막강한 영향력을 미치는 계정
+
+
+## 실습은 SCOTT 연습용 계정으로 할 예정
+
+@ 만드는 방법
+
+1. cmd 창을 연다
+2. sqlplus / as sysdba 로 sqlplus에 접속한다.
+3. 우선 scott계정이 있다면 지운다.
+drop user scott cascade;	
+4. scott 계정을 생성한다.
+create user scott identified by tiger; 
+5. tablespace를 무제한 사용할 수 있도록 수정한다.
+alter user scott default tablespace users quota unlimited on users;   
+6. scott sql을 실행한다.
+@E:\oracleexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql 
